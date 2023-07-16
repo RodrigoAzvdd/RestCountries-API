@@ -35,6 +35,7 @@ span {
 }
 
 .label {
+    font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
 }
@@ -145,23 +146,11 @@ span {
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 560px) {
     #header {
-        padding-left: 1rem;
-        padding-top: 1rem;
-        justify-content: start;
+        text-align: center;
     }
-
-    .label {
-        color: #000;
-    }
-
-    .title {
-        font-size: 2rem;
-    }
-
     span {
-        font-size: .8rem;
-        padding-left: 0rem;
+        color: #ff0000;
     }
 }
