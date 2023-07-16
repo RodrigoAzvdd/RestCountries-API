@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descobrindo o Mundo</title>
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="shortcut icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Globe_icon.svg/1200px-Globe_icon.svg.png"
+        type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <header id="header">
+            <h1 class="title">"Discovering the World"</h1>
+            <span>console.log('with JS');</span>
+        </header>
+        <main id="main-content">
+            <form class="form">
+                <label class="label" for="countryName">Name: </label>
+                <input class="input" type="text" id="countryName" placeholder="example: Brazil">
+                <button type="button" class="btn">Search</button>
+            </form>
+            <div class="country-card d-none">
+                <p id="flag">
+                    <img src="" id="img">
+                </p>
+                <div class="card-info">
+                    <p id="name"></p>
+                    <p id="capital"></p>
+                    <p id="population"></p>
+                    <p id="area"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
