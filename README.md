@@ -20,7 +20,7 @@ Este é um projeto pessoal desenvolvido utilizando as tecnologias HTML, CSS e Ja
 2. Abra o arquivo `index.html` em qualquer navegador web.
 3. Digite o nome de um país no campo de busca e pressione Enter.
 4. Os dados do país, incluindo nome, bandeira, população e área, serão exibidos na tela.
-5. 
+
 ## Recursos Adicionais
 
 - Para acessar a API RestCountries utilizada neste projeto, visite [RestCountries API](https://restcountries.com/).
