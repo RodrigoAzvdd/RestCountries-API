@@ -1,10 +1,22 @@
 const form = document.querySelector('.form')
 
-const flagImg = document.querySelector('#img')
-const nameInput = document.querySelector('#name')
-const capital = document.querySelector('#capital')
-const population = document.querySelector('#population')
-const area = document.querySelector('#area')
+// div => (flag - cardInfo)
+const flagCard = document.querySelector('#flag')
+const cardInfo = document.querySelector('.card-info')
+
+// items => (flag - countryCard)
+const flagImg = document.createElement('img')
+const nameInput = document.createElement('p')
+const capital = document.createElement('p')
+const population = document.createElement('p')
+const area = document.createElement('p')
+
+flagImg.id = 'img'
+nameInput.id = 'name'
+capital.id = 'capital'
+population.id = 'population'
+area.id = 'area'
+
 const countryCard = document.querySelector('.country-card')
 
 async function getCountry(name) {
@@ -39,6 +51,10 @@ async function showCountry() {
         population.textContent = `Population: ${countryPopulation}`
         area.textContent = `Area: ${countryArea} Km²`
         flagImg.src = countryFlag
+
+        cardInfo.append(nameInput, capital, population, area)
+        flagCard.append(flagImg)
+        countryCard.append(flagCard, cardInfo)
 
         countryCard.classList.remove('d-none')
     } catch (err) {
