@@ -1,6 +1,5 @@
-const submitBtn = document.querySelector('.btn')
+const form = document.querySelector('.form')
 
-//card items
 const flagImg = document.querySelector('#img')
 const nameInput = document.querySelector('#name')
 const capital = document.querySelector('#capital')
@@ -58,4 +57,8 @@ function resetCard() {
     flagImg.src = ''
 }
 
-submitBtn.addEventListener('click', showCountry)
+form.addEventListener('submit', (ev) => {
+    ev.preventDefault()
+    showCountry()
+});
+
