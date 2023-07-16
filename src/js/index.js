@@ -1,8 +1,10 @@
 const form = document.querySelector('.form')
 
 // div => (flag - cardInfo)
-const flagCard = document.querySelector('#flag')
-const cardInfo = document.querySelector('.card-info')
+const flagCard = document.createElement('div')
+const cardInfo = document.createElement('div')
+flagCard.id = 'flag'
+cardInfo.classList.add('card-info') 
 
 // items => (flag - countryCard)
 const flagImg = document.createElement('img')
@@ -11,6 +13,7 @@ const capital = document.createElement('p')
 const population = document.createElement('p')
 const area = document.createElement('p')
 
+//add items id
 flagImg.id = 'img'
 nameInput.id = 'name'
 capital.id = 'capital'
@@ -62,9 +65,11 @@ async function showCountry() {
             countryCard.classList.add('d-none')
         }
         alert(err)
+        resetCard()
     }
 }
 
+//reset card items values
 function resetCard() {
     nameInput.textContent = ''
     capital.textContent = ''
@@ -73,6 +78,7 @@ function resetCard() {
     flagImg.src = ''
 }
 
+//add onSubmit on form
 form.addEventListener('submit', (ev) => {
     ev.preventDefault()
     showCountry()
